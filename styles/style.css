@@ -1,3 +1,25 @@
+/*
+ * Font Name: Roboto
+ * Source: https://github.com/googlefonts/roboto-3-classic
+ * Author: Christian Robertson
+ * Contributors: https://github.com/googlefonts/roboto-3-classic/graphs/contributors?all=1
+ * License: SIL Open Font License 1.1
+*/
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../assets/fonts/Roboto-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Outfit-static";
+  src: url("../assets/fonts/Roboto-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+}
+
 *,
 *::before,
 *::after {
