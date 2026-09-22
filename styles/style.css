@@ -42,6 +42,7 @@
   --c-main-text: var(--color-blue-800);
   --c-error-message: var(--color-red-400);
   --c-button-text: var(--color-white);
+  --c-section-bg: var(--color-white);
 
   --ff-primary: var(--font-family-roboto);
 
@@ -105,6 +106,10 @@ body {
   font-weight: var(--fw-main-text);
   color: var(--c-main-text);
   line-height: var(--lh-main-text);
+}
+
+section {
+  background-color: var(--c-section-bg);
 }
 
 .title {
