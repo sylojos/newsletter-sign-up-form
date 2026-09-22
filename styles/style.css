@@ -81,6 +81,7 @@
   --mbs-form: var(--spacing-40);
   --mbs-button: var(--spacing-24);
   --mbe-title-success: var(--spacing-24);
+  --mbe-success-logo: var(--spacing-40);
 
   --gap-row-section-default: var(--spacing-30);
   --gap-row-form-field: var(--spacing-8);
@@ -215,6 +216,17 @@ button {
   block-size: calc(842 / 16 * 1rem);
   display: flex;
   flex-direction: column;
+}
+
+.section-success::before {
+  content: "";
+  background-image: url(../assets/images/icon-success.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  inline-size: calc(64 / 16 * 1rem);
+  block-size: calc(64 / 16 * 1rem);
+  margin-block-end: var(--mbe-success-logo);
+  margin-block-start: auto;
 }
 
 h2.title {
