@@ -23,6 +23,7 @@
 :root {
   --color-red-400: oklch(69.712% 0.1934 27.203);
   --color-blue-800: oklch(28.361% 0.04967 277.905);
+  --color-grey: oklch(66.655% 0.00008 271.152);
   --color-white: oklch(100% 0.00011 271.152);
 
   --font-family-roboto: "Roboto", sans-serif;
@@ -47,10 +48,13 @@
   --spacing-10: calc(10 / 16 * 1rem);
   --spacing-8: calc(8 / 16 * 1rem);
 
+  --radius-8: calc(8 / 16 * 1rem);
+
   --c-main-text: var(--color-blue-800);
   --c-error-message: var(--color-red-400);
   --c-button-text: var(--color-white);
   --c-section-bg: var(--color-white);
+  --c-input-border: var(--color-grey);
 
   --ff-primary: var(--font-family-roboto);
 
@@ -86,6 +90,8 @@
   --gap-column-list: var(--spacing-16);
   --gap-row-section-default: var(--spacing-30);
   --gap-row-form-field: var(--spacing-8);
+
+  --br-input: var(--radius-8);
 }
 
 *,
@@ -204,6 +210,10 @@ input[id="emailAddress"] {
   grid-row: 2;
   padding-inline-start: var(--pdis-input);
   padding-block: var(--pdb-input);
+  border-radius: var(--br-input);
+  border: 2px solid var(--c-input-border);
+  opacity: 0.7;
+  block-size: calc(56 / 16 * 1rem);
 }
 
 .field-error-msg {
