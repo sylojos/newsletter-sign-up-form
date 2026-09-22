@@ -55,6 +55,8 @@
   --c-button-text: var(--color-white);
   --c-section-bg: var(--color-white);
   --c-input-border: var(--color-grey);
+  --c-input-border-focus: var(--color-blue-800);
+  --c-input-outline-focus: var(--color-blue-800);
 
   --ff-primary: var(--font-family-roboto);
 
@@ -214,6 +216,11 @@ input[id="emailAddress"] {
   border: 2px solid var(--c-input-border);
   opacity: 0.7;
   block-size: calc(56 / 16 * 1rem);
+}
+
+input[id="emailAddress"]:focus-visible {
+  border-color: var(--c-input-border-focus);
+  outline: 1px solid var(--c-input-outline-focus);
 }
 
 .field-error-msg {
