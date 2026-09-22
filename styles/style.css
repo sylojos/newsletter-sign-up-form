@@ -22,6 +22,7 @@
 
 :root {
   --color-red-400: oklch(69.712% 0.1934 27.203);
+  --color-red-450: oklch(69.712% 0.1934 27.203 / 0.2);
   --color-blue-800: oklch(28.361% 0.04967 277.905);
   --color-grey: oklch(66.655% 0.00008 271.152);
   --color-white: oklch(100% 0.00011 271.152);
@@ -57,6 +58,9 @@
   --c-input-border: var(--color-grey);
   --c-input-border-focus: var(--color-blue-800);
   --c-input-outline-focus: var(--color-blue-800);
+  --c-input-text-error: var(--color-red-400);
+  --c-input-bg-error: var(--color-red-450);
+  --c-input-border-error: var(--color-red-400);
 
   --ff-primary: var(--font-family-roboto);
 
@@ -221,6 +225,13 @@ input[id="emailAddress"] {
 input[id="emailAddress"]:focus-visible {
   border-color: var(--c-input-border-focus);
   outline: 1px solid var(--c-input-outline-focus);
+}
+
+input[aria-invalid="true"] {
+  color: var(--c-input-text-error);
+  background-color: var(--c-input-bg-error);
+  border-color: var(--c-input-border-error);
+  opacity: 1;
 }
 
 .field-error-msg {
