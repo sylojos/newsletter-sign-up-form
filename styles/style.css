@@ -20,6 +20,48 @@
   font-display: swap;
 }
 
+:root {
+  --color-red-400: oklch(69.712% 0.1934 27.203);
+  --color-blue-800: oklch(28.361% 0.04967 277.905);
+  --color-white: oklch(100% 0.00011 271.152);
+
+  --font-family-roboto: "Roboto", sans-serif;
+
+  --font-size-40: calc(40 / 16 * 1rem);
+  --font-size-16: calc(16 / 16 * 1rem);
+  --font-size-12: calc(12 / 16 * 1rem);
+
+  --font-weight-bold: 700;
+  --font-weight-regular: 400;
+
+  --line-height-150pc: 1.5;
+  --line-height-100pc: 1;
+
+  --letter-spacing-1pc: calc(1 * 0.01em);
+
+  --c-main-text: var(--color-blue-800);
+  --c-error-message: var(--color-red-400);
+  --c-button-text: var(--color-white);
+
+  --ff-primary: var(--font-family-roboto);
+
+  --fs-title: var(--font-size-40);
+  --fs-main-text: var(--font-size-16);
+  --fs-label: var(--font-size-12);
+  --fs-error-message: var(--font-size-12);
+
+  --fw-title: var(--font-weight-bold);
+  --fw-main-text: var(--font-weight-regular);
+  --fw-label: var(--font-weight-bold);
+  --fw-error-message: var(--font-weight-bold);
+  --fw-button-text: var(--font-weight-bold);
+
+  --lh-main-text: var(--line-height-150pc);
+  --lh-title-success: var(--line-height-100pc);
+
+  --ls-error-message: var(--letter-spacing-1pc);
+}
+
 *,
 *::before,
 *::after {
@@ -55,4 +97,38 @@ h4,
 h5,
 h6 {
   overflow-wrap: break-word;
+}
+
+body {
+  font-family: var(--ff-primary);
+  font-size: var(--fs-main-text);
+  font-weight: var(--fw-main-text);
+  color: var(--c-main-text);
+  line-height: var(--lh-main-text);
+}
+
+.title {
+  font-size: var(--fs-title);
+  font-weight: var(--fw-title);
+}
+
+label[for="emailAddress"] {
+  font-size: var(--fs-label);
+  font-weight: var(--fw-label);
+}
+
+.field-error-msg {
+  font-size: var(--fs-error-message);
+  font-weight: var(--fw-error-message);
+  letter-spacing: var(--ls-error-message);
+  color: var(--c-error-message);
+}
+
+button {
+  font-weight: var(--fw-button-text);
+  color: var(--c-button-text);
+}
+
+h2.title {
+  line-height: var(--lh-title-success);
 }
