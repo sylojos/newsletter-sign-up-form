@@ -83,6 +83,7 @@
   --mbe-title-success: var(--spacing-24);
   --mbe-success-logo: var(--spacing-40);
 
+  --gap-column-list: var(--spacing-16);
   --gap-row-section-default: var(--spacing-30);
   --gap-row-form-field: var(--spacing-8);
 }
@@ -171,6 +172,16 @@ ul[role="list"] li {
 
 li + li {
   margin-block-start: var(--mbs-listitem);
+}
+
+ul[role="list"] li::before {
+  content: "";
+  background-image: url(../assets/images/icon-list.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  inline-size: calc(21 / 16 * 1rem);
+  block-size: calc(21 / 16 * 1rem);
+  flex-shrink: 0;
 }
 
 form {
