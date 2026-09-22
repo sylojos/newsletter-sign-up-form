@@ -80,6 +80,7 @@
   --mbs-listitem: var(--spacing-10);
   --mbs-form: var(--spacing-40);
   --mbs-button: var(--spacing-24);
+  --mbe-title-success: var(--spacing-24);
 
   --gap-row-section-default: var(--spacing-30);
   --gap-row-form-field: var(--spacing-8);
@@ -140,7 +141,8 @@ section {
   row-gap: var(--gap-row-section-default);
 }
 
-.content {
+.content,
+.section-success {
   padding-inline: var(--pdi-content);
   padding-block-end: var(--pdbe-content);
 }
@@ -209,6 +211,17 @@ button {
   color: var(--c-button-text);
 }
 
+.section-success {
+  block-size: calc(842 / 16 * 1rem);
+  display: flex;
+  flex-direction: column;
+}
+
 h2.title {
   line-height: var(--lh-title-success);
+  margin-block-end: var(--mbe-title-success);
+}
+
+.section-success button {
+  margin-block-start: auto;
 }
