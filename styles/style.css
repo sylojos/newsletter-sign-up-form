@@ -323,6 +323,10 @@ h2.title {
   margin-block-start: auto;
 }
 
+.hidden {
+  display: none;
+}
+
 @media (min-width: 28.125em) {
   :root {
     --c-body-bg: var(--color-blue-700);
