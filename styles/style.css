@@ -61,6 +61,7 @@
   --c-input-text-error: var(--color-red-400);
   --c-input-bg-error: var(--color-red-450);
   --c-input-border-error: var(--color-red-400);
+  --c-button-bg: var(--color-blue-800);
 
   --ff-primary: var(--font-family-roboto);
 
@@ -84,6 +85,7 @@
   --pdbe-content: var(--spacing-40);
   --pdis-input: var(--spacing-24);
   --pdb-input: var(--spacing-16);
+  --pd-button: var(--spacing-16);
 
   --mbe-title-default: var(--spacing-14);
   --mbs-list: var(--spacing-24);
@@ -98,6 +100,7 @@
   --gap-row-form-field: var(--spacing-8);
 
   --br-input: var(--radius-8);
+  --br-button: var(--radius-8);
 }
 
 *,
@@ -249,6 +252,12 @@ form button {
 button {
   font-weight: var(--fw-button-text);
   color: var(--c-button-text);
+  background-color: var(--c-button-bg);
+  border: 0;
+  border-radius: var(--br-button);
+  padding: var(--pd-button);
+  inline-size: 100%;
+  cursor: pointer;
 }
 
 .section-success {
