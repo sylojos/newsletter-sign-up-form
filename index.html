@@ -17,6 +17,8 @@
     <title>
       Frontend Mentor | Newsletter sign-up form with success message
     </title>
+
+    <script defer src="scripts/main.js"></script>
   </head>
   <body>
     <main>
@@ -65,12 +67,13 @@
                 id="emailAddress"
                 name="email"
                 placeholder="email@company.com"
+                class="jsEmailField"
                 required
                 aria-describedby="emailError"
               />
 
               <span
-                class="field-error-msg"
+                class="field-error-msg jsErrorMessage"
                 id="emailError"
                 aria-live="assertive"
               ></span>
@@ -87,8 +90,9 @@
         <h2 class="title">Thanks for subscribing!</h2>
 
         <p>
-          A confirmation email has been sent to <strong></strong>. Please open
-          it and click the button inside to confirm your subscription.
+          A confirmation email has been sent to
+          <strong></strong>. Please open it and click the button inside to
+          confirm your subscription.
         </p>
 
         <button type="button">Dismiss message</button>
