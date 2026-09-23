@@ -39,4 +39,12 @@ emailInput.addEventListener("change", () => {
   isChanged = true;
 });
 
+emailInput.addEventListener("keyup", () => {
+  const emailValidity = isEmailValid();
+  if (emailValidity) {
+    emailInput.removeAttribute("aria-invalid");
+    errorMessage.textContent = "";
+  }
+});
+
 emailInput.addEventListener("blur", handleEmailInput);
