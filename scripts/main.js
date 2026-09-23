@@ -1,6 +1,9 @@
 const form = document.querySelector("form");
 const emailInput = form.querySelector(".jsEmailField");
 const errorMessage = form.querySelector(".jsErrorMessage");
+const signUpPage = document.querySelector(".jsDefaultSection");
+const successPage = document.querySelector(".jsSuccessSection");
+const confirmEmail = document.querySelector(".jsConfirmEmail");
 
 const emailRegExp = /^[\w.!#$%&'*+/=?^`{|}~-]+@[a-z\d-]+(?:\.[a-z\d-]+)+$/i;
 
@@ -35,6 +38,22 @@ function handleEmailInput() {
   }
 }
 
+function handleSubmit(event) {
+  event.preventDefault();
+  const emailValidity = isEmailValid();
+  if (!emailValidity) {
+    emailInput.setAttribute("aria-invalid", "true");
+    errorMessage.textContent = "Valid email required";
+    emailInput.focus();
+  } else {
+    emailInput.removeAttribute("aria-invalid");
+    errorMessage.textContent = "";
+    signUpPage.classList.toggle("hidden");
+    successPage.classList.toggle("hidden");
+    confirmEmail.textContent = `${emailInput.value}`;
+  }
+}
+
 emailInput.addEventListener("change", () => {
   isChanged = true;
 });
@@ -48,3 +67,4 @@ emailInput.addEventListener("keyup", () => {
 });
 
 emailInput.addEventListener("blur", handleEmailInput);
+form.addEventListener("submit", handleSubmit);
