@@ -24,6 +24,7 @@
   --color-red-400: oklch(69.712% 0.1934 27.203);
   --color-red-450: oklch(69.712% 0.1934 27.203 / 0.2);
   --color-red-600: oklch(69.227% 0.21339 2.258);
+  --color-blue-700: oklch(34.842% 0.03844 280.166);
   --color-blue-800: oklch(28.361% 0.04967 277.905);
   --color-grey: oklch(66.655% 0.00008 271.152);
   --color-white: oklch(100% 0.00011 271.152);
@@ -50,6 +51,7 @@
   --spacing-10: calc(10 / 16 * 1rem);
   --spacing-8: calc(8 / 16 * 1rem);
 
+  --radius-16: calc(16 / 16 * 1rem);
   --radius-8: calc(8 / 16 * 1rem);
 
   --c-main-text: var(--color-blue-800);
@@ -319,4 +321,35 @@ h2.title {
 
 .section-success button {
   margin-block-start: auto;
+}
+
+@media (min-width: 28.125em) {
+  :root {
+    --c-body-bg: var(--color-blue-700);
+
+    --br-section: var(--radius-16);
+  }
+
+  body {
+    min-height: 100vh;
+    min-height: 100dvh;
+    min-block-size: 100dvb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--c-body-bg);
+  }
+
+  main {
+    max-inline-size: 28.125rem;
+  }
+
+  .section-default {
+    border-radius: var(--br-section);
+    overflow: hidden;
+  }
+
+  .section-success {
+    border-radius: var(--br-section);
+  }
 }
