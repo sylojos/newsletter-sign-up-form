@@ -353,3 +353,33 @@ h2.title {
     border-radius: var(--br-section);
   }
 }
+
+@media (min-width: 48em) {
+  :root {
+    --font-size-48: calc(48 / 16 * 1rem);
+
+    --c-body-bg: var(--color-blue-700);
+    --fs-title: var(--font-size-48);
+    --mi-image: var(--spacing-24);
+    --mbs-image: var(--spacing-40);
+  }
+
+  body {
+    min-height: 100vh;
+    min-height: 100dvh;
+    min-block-size: 100dvb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--c-body-bg);
+  }
+
+  main {
+    max-inline-size: 48rem;
+  }
+
+  .image-wrapper {
+    margin-inline: var(--mi-image);
+    margin-block-start: var(--mbs-image);
+  }
+}
