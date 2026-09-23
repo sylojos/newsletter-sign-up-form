@@ -23,6 +23,7 @@
 :root {
   --color-red-400: oklch(69.712% 0.1934 27.203);
   --color-red-450: oklch(69.712% 0.1934 27.203 / 0.2);
+  --color-red-600: oklch(69.227% 0.21339 2.258);
   --color-blue-800: oklch(28.361% 0.04967 277.905);
   --color-grey: oklch(66.655% 0.00008 271.152);
   --color-white: oklch(100% 0.00011 271.152);
@@ -62,6 +63,8 @@
   --c-input-bg-error: var(--color-red-450);
   --c-input-border-error: var(--color-red-400);
   --c-button-bg: var(--color-blue-800);
+  --c-gradient-start: var(--color-red-600);
+  --c-gradient-end: var(--color-red-400);
 
   --ff-primary: var(--font-family-roboto);
 
@@ -258,6 +261,15 @@ button {
   padding: var(--pd-button);
   inline-size: 100%;
   cursor: pointer;
+}
+
+button:hover,
+button:focus-visible {
+  background-image: linear-gradient(
+    90deg,
+    var(--c-gradient-start),
+    var(--c-gradient-end)
+  );
 }
 
 .section-success {
