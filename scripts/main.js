@@ -4,6 +4,7 @@ const errorMessage = form.querySelector(".jsErrorMessage");
 const signUpPage = document.querySelector(".jsDefaultSection");
 const successPage = document.querySelector(".jsSuccessSection");
 const confirmEmail = document.querySelector(".jsConfirmEmail");
+const dismissButton = document.querySelector(".jsDismiss");
 
 const emailRegExp = /^[\w.!#$%&'*+/=?^`{|}~-]+@[a-z\d-]+(?:\.[a-z\d-]+)+$/i;
 
@@ -54,6 +55,13 @@ function handleSubmit(event) {
   }
 }
 
+function handleDismiss() {
+  signUpPage.classList.toggle("hidden");
+  successPage.classList.toggle("hidden");
+  emailInput.value = "";
+  isChanged = false;
+}
+
 emailInput.addEventListener("change", () => {
   isChanged = true;
 });
@@ -68,3 +76,4 @@ emailInput.addEventListener("keyup", () => {
 
 emailInput.addEventListener("blur", handleEmailInput);
 form.addEventListener("submit", handleSubmit);
+dismissButton.addEventListener("click", handleDismiss);
